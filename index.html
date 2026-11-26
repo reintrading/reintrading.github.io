@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Rein Trading</title>
 <meta name="description" content="Rein Trading: stocks and NQ futures, the ICT method, and every trade logged in a public journal. Wins and losses.">
 <meta name="theme-color" content="#0d0907">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230d0907'/%3E%3Ctext x='30' y='46' font-family='Georgia,serif' font-style='italic' font-size='40' fill='%23d6803f' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <meta property="og:title" content="Rein Trading: every trade in public">
 <meta property="og:description" content="Free trade journal, free ICT lessons on YouTube, and the full scoreboard. Wins and losses.">
-<meta property="og:image" content="https://reintrading.github.io/IMG_1085.png">
+<meta property="og:image" content="https://reintrading.github.io/og.png">
 <meta property="og:url" content="https://reintrading.github.io/">
 <link rel="canonical" href="https://reintrading.github.io/">
 <meta property="og:type" content="website">
@@ -80,10 +80,29 @@ a:focus-visible{outline:2px solid var(--cop);outline-offset:3px}
 footer{margin-top:30px;text-align:center;color:var(--mute);font-size:13px;line-height:1.5}
 footer p{margin:4px 0}
 @media (max-width:360px){h1{font-size:34px}.primary{font-size:16px}}
+
+main{padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right));padding-bottom:max(36px,env(safe-area-inset-bottom))}
+@media (min-width:600px) and (max-width:899px){main{max-width:560px;padding-top:56px}h1{font-size:46px}}
+@media (min-width:900px){
+ main{max-width:1080px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:56px;align-items:start;padding-top:72px}
+ .col-a{position:sticky;top:48px}
+ .head{align-items:flex-start;text-align:left}
+ h1{font-size:52px}
+ .lede{font-size:18px;max-width:30em}
+ .chart{margin-top:30px}
+ .col-b{padding-top:8px}
+ footer{grid-column:1/-1}
+}
+@media (min-width:1400px){main{max-width:1200px}h1{font-size:60px}}
+@media (max-height:500px) and (orientation:landscape){main{padding-top:20px}.av{width:64px;height:64px}.av span{font-size:42px}}
+@media (max-width:380px){.chart .cap span{display:none}.chart .cap{justify-content:flex-end}.primary{padding:16px}}
+@media (hover:none){.primary:hover,.link:hover{transform:none}}
+.primary:active,.link:active{transform:scale(.98)}
 </style>
 </head>
 <body>
 <main>
+ <div class="col-a">
   <header class="head">
     <div class="av" aria-hidden="true"><span>R</span></div>
     <h1>Rein <i>Trading</i></h1>
@@ -117,6 +136,8 @@ footer p{margin:4px 0}
     </svg>
     <figcaption class="cap"><span>ICT in one picture</span><b>Sweep → gap → move</b></figcaption>
   </figure>
+ </div>
+ <div class="col-b">
 
   <a class="primary" href="https://sable-shell-35f.notion.site/Rein-Trading-Journal-2ea55abbf33380d8a27ecca9a35a4e79">
     <span>Open my free trade journal<small>Every call with price, target and result. Free, no signup.</small></span>
@@ -152,6 +173,7 @@ footer p{margin:4px 0}
     <div class="row"><span class="tk">MSFT</span><span class="px">25 Aug · $368</span><span class="res up">+33.8%<em>Both targets hit</em></span></div>
     <a class="all" href="https://sable-shell-35f.notion.site/Rein-Trading-Journal-2ea55abbf33380d8a27ecca9a35a4e79">See all 8 calls, losses included →</a>
   </section>
+ </div>
 
   <footer>
     <p>Education only. Not financial advice. Trading involves risk of loss.</p>
